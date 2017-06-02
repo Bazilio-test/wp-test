@@ -1,0 +1,403 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: InCode Movies\n"
+"POT-Creation-Date: 2017-06-02 21:12+0300\n"
+"PO-Revision-Date: 2017-06-02 21:12+0300\n"
+"Last-Translator: Viacheslav Makarov <v.makarov@bazilio.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.10\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: incode-movies.php\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: incode-movies.php:21
+msgid "Movie genres"
+msgstr "Жанры фильмов"
+
+#: incode-movies.php:23
+msgctxt "taxonomy general name"
+msgid "Movie genres"
+msgstr "Жанры фильмов"
+
+#: incode-movies.php:24
+msgctxt "taxonomy singular name"
+msgid "Мovie genre"
+msgstr "Жанр фильма"
+
+#: incode-movies.php:25
+msgid "Genres"
+msgstr "Жанры"
+
+#: incode-movies.php:26
+msgid "All movie genres"
+msgstr "Все жанры фильмов"
+
+#: incode-movies.php:27
+msgid "Change movie genre"
+msgstr "Изменить жанр фильма"
+
+#: incode-movies.php:28
+msgid "View movie genre"
+msgstr "Просмотртеть жанр фильма"
+
+#: incode-movies.php:29
+msgid "Update movie genre"
+msgstr "Обновить жанр фильма"
+
+#: incode-movies.php:30
+msgid "Add new movie genre"
+msgstr "Добавить новый жанр фильма"
+
+#: incode-movies.php:31
+msgid "Movie genre"
+msgstr "Жанр фильма"
+
+#: incode-movies.php:32 incode-movies.php:80 incode-movies.php:128
+#: incode-movies.php:176
+msgid "Parent"
+msgstr "Родительская"
+
+#: incode-movies.php:33 incode-movies.php:81 incode-movies.php:129
+#: incode-movies.php:177
+msgid "Parent:"
+msgstr "Родительская:"
+
+#: incode-movies.php:34
+msgid "Search movie genres"
+msgstr "Поиск жанров фильмов"
+
+#: incode-movies.php:35
+msgid "Popular genres"
+msgstr "Популярные жанры"
+
+#: incode-movies.php:36
+msgid "Separate genres with commas"
+msgstr "Жанры разделяются запятыми"
+
+#: incode-movies.php:37
+msgid "Add or remove genre"
+msgstr "Добавить или удалить жанр"
+
+#: incode-movies.php:38
+msgid "Choose from most used genres"
+msgstr "Выбрать из часто используемых жанров"
+
+#: incode-movies.php:39
+msgid "Genres not found."
+msgstr "Жанры не найдены."
+
+#: incode-movies.php:69
+msgid "Сountries"
+msgstr "Страны"
+
+#: incode-movies.php:71
+msgctxt "taxonomy general name"
+msgid "Сountries"
+msgstr "Страны"
+
+#: incode-movies.php:72
+msgctxt "taxonomy singular name"
+msgid "Сountry"
+msgstr "Страна"
+
+#: incode-movies.php:73
+msgid "Countries"
+msgstr "Страны"
+
+#: incode-movies.php:74
+msgid "All countries"
+msgstr "Все страны"
+
+#: incode-movies.php:75
+msgid "Change country"
+msgstr "Изменить страну"
+
+#: incode-movies.php:76
+msgid "View country"
+msgstr "Просмотртеть страну"
+
+#: incode-movies.php:77
+msgid "Update country"
+msgstr "Обновить страну"
+
+#: incode-movies.php:78
+msgid "Add new country"
+msgstr "Добавить новую страну"
+
+#: incode-movies.php:79
+msgid "Country"
+msgstr "Страна"
+
+#: incode-movies.php:82
+msgid "Search country"
+msgstr "Поиск страны"
+
+#: incode-movies.php:83
+msgid "Popular countries"
+msgstr "Популярные страны"
+
+#: incode-movies.php:84
+msgid "Separate countries with commas"
+msgstr "Страны разделяются запятыми"
+
+#: incode-movies.php:85
+msgid "Add or remove country"
+msgstr "Добавить или удалить страну"
+
+#: incode-movies.php:86
+msgid "Choose from most used countries"
+msgstr "Выбрать из часто используемых стран"
+
+#: incode-movies.php:87
+msgid "Countries not found."
+msgstr "Страны не найдены."
+
+#: incode-movies.php:117
+msgid "Years of movie releases"
+msgstr "Годы выпуска фильмов"
+
+#: incode-movies.php:119
+msgctxt "taxonomy general name"
+msgid "Years of movie releases"
+msgstr "Годы выпуска фильмов"
+
+#: incode-movies.php:120
+msgctxt "taxonomy singular name"
+msgid "Year of movie release"
+msgstr "Год выпуска фильма"
+
+#: incode-movies.php:121
+msgid "Years"
+msgstr "Годы"
+
+#: incode-movies.php:122
+msgid "All years of releases"
+msgstr "Все годы выпуска"
+
+#: incode-movies.php:123
+msgid "Change year of release"
+msgstr "Изменить год выпуска"
+
+#: incode-movies.php:124
+msgid "View year of release"
+msgstr "Просмотртеть год выпуска"
+
+#: incode-movies.php:125
+msgid "Update year of release"
+msgstr "Обновить год выпуска"
+
+#: incode-movies.php:126
+msgid "Add new year of release"
+msgstr "Добавить новый год выпуска"
+
+#: incode-movies.php:127
+msgid "Year"
+msgstr "Год выпуска"
+
+#: incode-movies.php:130
+msgid "Search by year of release"
+msgstr "Поиск по году выпуска"
+
+#: incode-movies.php:131
+msgid "Popular years of releases"
+msgstr "Популярные годы выпуска"
+
+#: incode-movies.php:132
+msgid "Separate years with commas"
+msgstr "Годы разделяются запятыми"
+
+#: incode-movies.php:133
+msgid "Add or remove year"
+msgstr "Добавить или удалить год"
+
+#: incode-movies.php:134
+msgid "Choose from most used years"
+msgstr "Выбрать из часто используемых годов"
+
+#: incode-movies.php:135
+msgid "Year of release not found."
+msgstr "Год выпуска не найден."
+
+#: incode-movies.php:165 incode-movies.php:169
+msgid "Actors"
+msgstr "Актеры"
+
+#: incode-movies.php:167
+msgctxt "taxonomy general name"
+msgid "Actors"
+msgstr "Актеры"
+
+#: incode-movies.php:168
+msgctxt "taxonomy singular name"
+msgid "Actor"
+msgstr "Актер"
+
+#: incode-movies.php:170
+msgid "All actors"
+msgstr "Все актеры"
+
+#: incode-movies.php:171
+msgid "Change actor"
+msgstr "Изменить актера"
+
+#: incode-movies.php:172
+msgid "View actor"
+msgstr "Просмотртеть актера"
+
+#: incode-movies.php:173
+msgid "Update actor"
+msgstr "Обновить актера"
+
+#: incode-movies.php:174
+msgid "Add new actor"
+msgstr "Добавить нового актера"
+
+#: incode-movies.php:175
+msgid "Actor"
+msgstr "Актер"
+
+#: incode-movies.php:178
+msgid "Search actors"
+msgstr "Поиск актеров"
+
+#: incode-movies.php:179
+msgid "Popular actors"
+msgstr "Популярные актеры"
+
+#: incode-movies.php:180
+msgid "Separate actors with commas"
+msgstr "ктеры разделяются запятыми"
+
+#: incode-movies.php:181
+msgid "Add or remove actor"
+msgstr "Добавить или удалить актера"
+
+#: incode-movies.php:182
+msgid "Choose from most used actors"
+msgstr "Выбрать из часто используемых актеров"
+
+#: incode-movies.php:183
+msgid "Actors not found."
+msgstr "Актеры не найдены."
+
+#: incode-movies.php:215 incode-movies.php:217
+msgctxt "Post Type General Name"
+msgid "Movies"
+msgstr "Фильмы"
+
+#: incode-movies.php:218
+msgctxt "Post Type Singular Name"
+msgid "Movie"
+msgstr "Фильм"
+
+#: incode-movies.php:219
+msgid "Add new"
+msgstr "Добавить новый"
+
+#: incode-movies.php:220
+msgid "Add new movie"
+msgstr "Добавить новый фильм"
+
+#: incode-movies.php:221
+msgid "Edit movie"
+msgstr "Редактировать фильм"
+
+#: incode-movies.php:222
+msgid "New movie"
+msgstr "Новый фильм"
+
+#: incode-movies.php:223
+msgid "View movie info"
+msgstr "Просмотреть запись о фильме"
+
+#: incode-movies.php:224
+msgid "Search movies"
+msgstr "Поиск фильмов"
+
+#: incode-movies.php:225
+msgid "Movies not found"
+msgstr "Фильмы не найдены"
+
+#: incode-movies.php:226
+msgid "Movies not found in trash"
+msgstr "Фильмы не найдены в корзите"
+
+#: incode-movies.php:228
+msgid "All movies"
+msgstr "Все фильмы"
+
+#: incode-movies.php:229
+msgid "Archives of movies"
+msgstr "Архив фильмов"
+
+#: incode-movies.php:230
+msgid "Insert into movie info"
+msgstr "Вставить в инфо о фильме"
+
+#: incode-movies.php:231
+msgctxt "incode-movies"
+msgid "Uploaded to his movie:"
+msgstr "Загружен для фильма:"
+
+#: incode-movies.php:232
+msgid "Miniature of movie"
+msgstr "Миниатюра фильм"
+
+#: incode-movies.php:233
+msgid "Set miniature of movie"
+msgstr "Задать миниатюру фильма"
+
+#: incode-movies.php:234
+msgid "Remove miniature of movie"
+msgstr "Удалить миниатюру фильма"
+
+#: incode-movies.php:235
+msgid "Use miniature of movie"
+msgstr "Использовать миниатюру фильма"
+
+#: incode-movies.php:236
+msgid "Movies"
+msgstr "Фильмы"
+
+#: incode-movies.php:237
+msgid "Movie"
+msgstr "Фильм"
+
+#: incode-movies.php:238
+msgid "List of movies"
+msgstr "Список фильмов"
+
+#: incode-movies.php:239
+msgid "Page navigation"
+msgstr "Постраничная навигация"
+
+#: incode-movies.php:240
+msgid "Filter"
+msgstr "Фильтр"
+
+#. Plugin Name of the plugin/theme
+msgid "InCode Movies"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Test task from InCode: movie catalog plug-in."
+msgstr "Тестовоее задание от InCode: плагин - каталог фильмов"
+
+#. Author of the plugin/theme
+msgid "Viacheslav Makarov"
+msgstr "Вячеслав Макаров"
+
+#. Author URI of the plugin/theme
+msgid "http://bazilio.com/"
+msgstr "http://bazilio.com/"

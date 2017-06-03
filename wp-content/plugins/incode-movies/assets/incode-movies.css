@@ -1,0 +1,27 @@
+.incode-movies-div1{
+    text-transform: none;
+    padding: 0px 0px 4px 0px;
+    font-size: 12px;
+}
+
+.incode-movies-div2{
+    font-size: 12px;
+    text-transform: none;
+    padding-bottom: 11px;
+}
+
+.incode-movies-l {display: inline;line-height: 20px;}
+.incode-movies-d {
+    color: #54397E;
+    line-height: 20px;
+    display: inline;
+}
+.incode-movies-thmb{
+    width: 56px;
+    height: 84px;
+}
+.incode-movies-thmb-d{
+    float: left;
+    margin-right: 23px;
+    margin-top: 7px;
+}

@@ -9,11 +9,20 @@ Text Domain: incode-movies
 */
 
 define('INCODE_MOVIES__PLUGIN_DIR', plugin_dir_path(__FILE__));
-define('INCODE_MOVIES__PLUGIN', __FILE__);
+define('INCODE_MOVIES__PLUGIN_FILE', __FILE__);
+define('INCODE_MOVIES__PLUGIN_URL', plugin_dir_url(__FILE__));
+define('INCODE_MOVIES__VERSION', '1.0.0');
 
 require_once(INCODE_MOVIES__PLUGIN_DIR . 'on_activate.php');
 require_once(INCODE_MOVIES__PLUGIN_DIR . 'on_deactivate.php');
 
+// Load css & js
+//function incode_movies_enqueue_js_css(){
+//	wp_enqueue_script('incode_movies', INCODE_MOVIES__PLUGIN_DIR . 'assets/incode-movie.js', null, INCODE_MOVIES__VERSION);
+//}
+wp_enqueue_style('incode_movies', INCODE_MOVIES__PLUGIN_URL . 'assets/incode-movies.css', null, INCODE_MOVIES__VERSION);
+
+//add_action('wp_enqueue_scripts', 'incode_movies_enqueue_js_css');
 
 // load localization
 load_plugin_textdomain('incode-movies', false, dirname(plugin_basename(__FILE__)) . '/lang');
@@ -234,7 +243,7 @@ function register_post_movies(){
 			'parent_item_colon'     => null,
 			'all_items'             => __('All movies', 'incode-movies'),
 			'archives'              => __('Archives of movies', 'incode-movies'),
-			'insert_into_item'      => __('Insert into movie info', 'incode-movies'),
+			'insert_into_item'      => __('INSERT INTO movie info', 'incode-movies'),
 			'uploaded_to_this_item' => _x('Uploaded to his movie:', 'incode-movies'),
 			'featured_image'        => __('Miniature of movie', 'incode-movies'),
 			'set_featured_image'    => __('Set miniature of movie', 'incode-movies'),
@@ -255,8 +264,7 @@ function register_post_movies(){
 		'show_in_menu'         => true,
 		'show_in_admin_bar'    => true,
 		'menu_position'        => 5,
-		//TODO сменить иконку
-		'menu_icon'            => 'dashicons-editor-textcolor',
+		'menu_icon'            => 'dashicons-video-alt2',
 		'map_meta_cap'         => null,
 		'hierarchical'         => false,
 		'supports'             => [
@@ -274,7 +282,7 @@ function register_post_movies(){
 		],
 		'register_meta_box_cb' => null, // Обеспечивает обратный вызов функции, которая требуется при настройке метабоксов в разделе редактирования. По умолчанию: null.
 		'taxonomies'           => ['taxgenres', 'taxcountries', 'taxyears', 'taxactors'],
-		'has_archive'          => false, // Включает архивы данного типа записи. Будет использоваться значение $post_type как ярлык архива по умолчанию. По умолчанию: false
+		'has_archive'          => true, // Включает архивы данного типа записи. Будет использоваться значение $post_type как ярлык архива по умолчанию. По умолчанию: false
 		// Возможность перезаписи для данного типа записи. Чтобы предотвратить перезапись, используют значение false. По умолчанию: true и значение $post_type используется как ярлык.
 		'rewrite'              => [
 			'slug'       => $post_type,
@@ -309,7 +317,7 @@ add_action('add_meta_boxes', 'movies_meta_box');
 //Description of custom fields
 $movies_meta_fields = [
 	['id' => 'show_price', 'label' => __('Cost of the movie show', 'incode-movies')],
-	['id' => 'release_date', 'label' => __('Release date of the film', 'incode-movies')]
+	['id' => 'release_date', 'label' => __('Release date of the film', 'incode-movies'), 'descr' => __('Enter a date in format of dd.mm.yyy', 'incode-movies')]
 ];
 
 // Drow meta fields
@@ -326,7 +334,7 @@ function show_movies_metabox(){
 	$meta_release = get_post_meta($post->ID, $release['id'], true);
 	echo '<table class="form-table"><tr>';
 	echo '<td><label style="font-weight: 700;" for="' . $price['id'] . '">' . $price['label'] . ':</label> <input type="text" name="' . $price['id'] . '" id="' . $price['label'] . '" value="' . $meta_price . '" size="10" /></td>';
-	echo '<td><label style="font-weight: 700;" for="' . $release['id'] . '">' . $release['label'] . ':</label> <input type="text" name="' . $release['id'] . '" id="' . $release['label'] . '" value="' . $meta_release . '" size="10" /></td>';
+	echo '<td><label style="font-weight: 700;" for="' . $release['id'] . '">' . $release['label'] . ':</label> <input type="text" name="' . $release['id'] . '" id="' . $release['label'] . '" value="' . $meta_release . '" size="10" /> ' . $release['label'] . '</td>';
 	echo '</tr></table>';
 }
 
@@ -347,7 +355,7 @@ function save_movies_meta_fields($post_id){
 		if(!current_user_can('edit_page', $post_id)) return;
 	}elseif(!current_user_can('edit_post', $post_id)) return;
 
-
+//TODO Дата выхода - не только год, но и дата RegExp \d\d\.\d\d\.\d\d\d\d
 	// Если все отлично, прогоняем массив через foreach
 	foreach($movies_meta_fields as $field){
 		$old = get_post_meta($post_id, $field['id'], true); // Получаем старые данные (если они есть), для сверки
@@ -362,3 +370,18 @@ function save_movies_meta_fields($post_id){
 }
 
 add_action('save_post', 'save_movies_meta_fields');
+
+
+//Register custome template
+add_filter('template_include', 'include_template_function', 1);
+
+function include_template_function($template_path){
+	if(get_post_type() == 'movies'){
+		if(is_single()){
+			$template_path = INCODE_MOVIES__PLUGIN_DIR . '/templates/single.php';
+		}else if(is_archive()){
+			$template_path = INCODE_MOVIES__PLUGIN_DIR . '/templates/archive.php'; //-
+		}
+	}
+	return $template_path;
+}

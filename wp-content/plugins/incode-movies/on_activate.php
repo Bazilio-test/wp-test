@@ -71,14 +71,12 @@ function populate_demo_data(){
 				$movies_meta_fields[0]['id'] => $film['price'],
 				$movies_meta_fields[1]['id'] => $film['year']
 			],
-			'tags_input'     => [
-				'taxgenres'    => $film['genres'],
-				'taxcountries' => $film['country'],
-				'taxyears'     => $film['year'],
-				'taxactors'    => $film['actors']
-			]
 		];
-		wp_insert_post($postarr, true);
+		$post_id = wp_insert_post($postarr, true);
+		wp_set_post_terms( $post_id, $film['genres'], 'taxgenres');
+		wp_set_post_terms( $post_id, $film['country'], 'taxcountries');
+		wp_set_post_terms( $post_id, $film['year'], 'taxyears');
+		wp_set_post_terms( $post_id, $film['actors'], 'taxactors');
 	}
 }
 

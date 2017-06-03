@@ -266,7 +266,7 @@ function register_post_movies(){
 			'thumbnail',
 			'excerpt', // Цитата, отрывок.
 			'trackbacks', // Отправить обратные ссылки.
-			'custom-fields', // Произвольные поля.
+			//'custom-fields', // Произвольные поля.
 			'comments',
 			'revisions', // Сохраняет версии.
 			'page-attributes', // Атрибуты.

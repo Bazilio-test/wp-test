@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: InCode Movies\n"
-"POT-Creation-Date: 2017-06-02 21:05+0300\n"
-"PO-Revision-Date: 2017-06-02 21:12+0300\n"
+"POT-Creation-Date: 2017-06-02 21:52+0300\n"
+"PO-Revision-Date: 2017-06-03 10:11+0300\n"
 "Last-Translator: Viacheslav Makarov <v.makarov@bazilio.ru>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -103,8 +103,8 @@ msgstr "Сountries"
 
 #: incode-movies.php:71
 msgctxt "taxonomy general name"
-msgid "Сountries"
-msgstr "Сountries"
+msgid "Country producers of the film"
+msgstr "Country producers of the film"
 
 #: incode-movies.php:72
 msgctxt "taxonomy singular name"
@@ -169,8 +169,8 @@ msgstr "Years of movie releases"
 
 #: incode-movies.php:119
 msgctxt "taxonomy general name"
-msgid "Years of movie releases"
-msgstr "Years of movie releases"
+msgid "Year of movie release"
+msgstr "Year of movie release"
 
 #: incode-movies.php:120
 msgctxt "taxonomy singular name"
@@ -386,6 +386,10 @@ msgstr "Page navigation"
 msgid "Filter"
 msgstr "Filter"
 
+#: incode-movies.php:292
+msgid "Additional information about the film"
+msgstr "Additional information about the film"
+
 #. Plugin Name of the plugin/theme
 msgid "InCode Movies"
 msgstr "InCode Movies"
@@ -401,3 +405,390 @@ msgstr "Viacheslav Makarov"
 #. Author URI of the plugin/theme
 msgid "http://bazilio.com/"
 msgstr "http://bazilio.com/"
+
+msgid "Australia"
+msgstr "Australia"
+
+msgid "Austria"
+msgstr "Austria"
+
+msgid "Azerbaijan"
+msgstr "Azerbaijan"
+
+msgid "Albania"
+msgstr "Albania"
+
+msgid "Algeria"
+msgstr "Algeria"
+
+msgid "Argentina"
+msgstr "Argentina"
+
+msgid "Armenia"
+msgstr "Armenia"
+
+msgid "Afghanistan"
+msgstr "Afghanistan"
+
+msgid "Belarus"
+msgstr "Belarus"
+
+msgid "Belgium"
+msgstr "Belgium"
+
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+msgid "Bolivia"
+msgstr "Bolivia"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Bosnia and Herzegovina"
+
+msgid "Brazil"
+msgstr "Brazil"
+
+msgid "United Kingdom"
+msgstr "United Kingdom"
+
+msgid "Hungary"
+msgstr "Hungary"
+
+msgid "Venezuela"
+msgstr "Venezuela"
+
+msgid "Viet Nam"
+msgstr "Viet Nam"
+
+msgid "Germany"
+msgstr "Germany"
+
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+msgid "Greenland"
+msgstr "Greenland"
+
+msgid "Greece"
+msgstr "Greece"
+
+msgid "Georgia"
+msgstr "Georgia"
+
+msgid "Denmark"
+msgstr "Denmark"
+
+msgid "Egypt"
+msgstr "Egypt"
+
+msgid "Israel"
+msgstr "Israel"
+
+msgid "India"
+msgstr "India"
+
+msgid "Indonesia"
+msgstr "Indonesia"
+
+msgid "Jordan"
+msgstr "Jordan"
+
+msgid "Iraq"
+msgstr "Iraq"
+
+msgid "Iran"
+msgstr "Iran"
+
+msgid "Ireland"
+msgstr "Ireland"
+
+msgid "Iceland"
+msgstr "Iceland"
+
+msgid "Spain"
+msgstr "Spain"
+
+msgid "Italy"
+msgstr "Italy"
+
+msgid "Kazakhstan"
+msgstr "Kazakhstan"
+
+msgid "Cambodia"
+msgstr "Cambodia"
+
+msgid "Canada"
+msgstr "Canada"
+
+msgid "Qatar"
+msgstr "Qatar"
+
+msgid "Cyprus"
+msgstr "Cyprus"
+
+msgid "KDPR"
+msgstr "KDPR"
+
+msgid "China"
+msgstr "China"
+
+msgid "Colombia"
+msgstr "Colombia"
+
+msgid "Korea"
+msgstr "Korea"
+
+msgid "Cuba"
+msgstr "Cuba"
+
+msgid "Latvia"
+msgstr "Latvia"
+
+msgid "Lebanon"
+msgstr "Lebanon"
+
+msgid "Libya"
+msgstr "Libya"
+
+msgid "Lithuania"
+msgstr "Lithuania"
+
+msgid "Macedonia"
+msgstr "Macedonia"
+
+msgid "Morocco"
+msgstr "Morocco"
+
+msgid "Mexico"
+msgstr "Mexico"
+
+msgid "Moldova"
+msgstr "Moldova"
+
+msgid "Monaco"
+msgstr "Monaco"
+
+msgid "Mongolia"
+msgstr "Mongolia"
+
+msgid "Nepal"
+msgstr "Nepal"
+
+msgid "Nigeria"
+msgstr "Nigeria"
+
+msgid "Netherlands"
+msgstr "Netherlands"
+
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+msgid "New Zealand"
+msgstr "New Zealand"
+
+msgid "Norway"
+msgstr "Norway"
+
+msgid "United Arab Emirates"
+msgstr "United Arab Emirates"
+
+msgid "Pakistan"
+msgstr "Pakistan"
+
+msgid "Paraguay"
+msgstr "Paraguay"
+
+msgid "Peru"
+msgstr "Peru"
+
+msgid "Poland"
+msgstr "Poland"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Russian Federation"
+msgstr "Russian Federation"
+
+msgid "Romania"
+msgstr "Romania"
+
+msgid "El Salvador"
+msgstr "El Salvador"
+
+msgid "Saudi Arabia"
+msgstr "Saudi Arabia"
+
+msgid "Senegal"
+msgstr "Senegal"
+
+msgid "Serbia"
+msgstr "Serbia"
+
+msgid "Singapore"
+msgstr "Singapore"
+
+msgid "Syrian Arab Republic"
+msgstr "Syrian Arab Republic"
+
+msgid "Slovakia"
+msgstr "Slovakia"
+
+msgid "Slovenia"
+msgstr "Slovenia"
+
+msgid "United States"
+msgstr "United States"
+
+msgid "Tajikistan"
+msgstr "Tajikistan"
+
+msgid "Thailand"
+msgstr "Thailand"
+
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+msgid "Tunisia"
+msgstr "Tunisia"
+
+msgid "Turkmenistan"
+msgstr "Turkmenistan"
+
+msgid "Turkey"
+msgstr "Turkey"
+
+msgid "Uganda"
+msgstr "Uganda"
+
+msgid "Uzbekistan"
+msgstr "Uzbekistan"
+
+msgid "Ukraine"
+msgstr "Ukraine"
+
+msgid "USA"
+msgstr "USA"
+
+msgid "Philippines"
+msgstr "Philippines"
+
+msgid "Finland"
+msgstr "Finland"
+
+msgid "France"
+msgstr "France"
+
+msgid "Croatia"
+msgstr "Croatia"
+
+msgid "Montenegro"
+msgstr "Montenegro"
+
+msgid "Czech Republic"
+msgstr "Czech Republic"
+
+msgid "Chile"
+msgstr "Chile"
+
+msgid "Switzerland"
+msgstr "Switzerland"
+
+msgid "Sweden"
+msgstr "Sweden"
+
+msgid "Ecuador"
+msgstr "Ecuador"
+
+msgid "Estonia"
+msgstr "Estonia"
+
+msgid "Japan"
+msgstr "Japan"
+
+msgid "action"
+msgstr "action"
+
+msgid "adventure"
+msgstr "adventure"
+
+msgid "anime"
+msgstr "anime"
+
+msgid "biography"
+msgstr "biography"
+
+msgid "cartoon"
+msgstr "cartoon"
+
+msgid "children's"
+msgstr "children's"
+
+msgid "comedy"
+msgstr "comedy"
+
+msgid "crime"
+msgstr "crime"
+
+msgid "detective"
+msgstr "detective"
+
+msgid "documentary"
+msgstr "documentary"
+
+msgid "drama"
+msgstr "drama"
+
+msgid "eroticism"
+msgstr "eroticism"
+
+msgid "family"
+msgstr "family"
+
+msgid "fantasy"
+msgstr "fantasy"
+
+msgid "horror"
+msgstr "horror"
+
+msgid "melodrama"
+msgstr "melodrama"
+
+msgid "music"
+msgstr "music"
+
+msgid "musical"
+msgstr "musical"
+
+msgid "mystic"
+msgstr "mystic"
+
+msgid "post-apocalyptic"
+msgstr "post-apocalyptic"
+
+msgid "reality show"
+msgstr "reality show"
+
+msgid "scientific"
+msgstr "scientific"
+
+msgid "sci-fi"
+msgstr "sci-fi"
+
+msgid "short film"
+msgstr "short film"
+
+msgid "sport"
+msgstr "sport"
+
+msgid "thriller"
+msgstr "thriller"
+
+msgid "war"
+msgstr "war"
+
+msgid "western"
+msgstr "western"
+
+msgid "historical"
+msgstr "historical"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: InCode Movies\n"
-"POT-Creation-Date: 2017-06-02 21:12+0300\n"
-"PO-Revision-Date: 2017-06-02 21:12+0300\n"
+"POT-Creation-Date: 2017-06-02 22:09+0300\n"
+"PO-Revision-Date: 2017-06-03 10:14+0300\n"
 "Last-Translator: Viacheslav Makarov <v.makarov@bazilio.ru>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -28,7 +28,7 @@ msgstr "Жанры фильмов"
 #: incode-movies.php:23
 msgctxt "taxonomy general name"
 msgid "Movie genres"
-msgstr "Жанры фильмов"
+msgstr "Жанры фильма"
 
 #: incode-movies.php:24
 msgctxt "taxonomy singular name"
@@ -103,8 +103,8 @@ msgstr "Страны"
 
 #: incode-movies.php:71
 msgctxt "taxonomy general name"
-msgid "Сountries"
-msgstr "Страны"
+msgid "Country producers of the film"
+msgstr "Страна производитель фильма "
 
 #: incode-movies.php:72
 msgctxt "taxonomy singular name"
@@ -169,8 +169,8 @@ msgstr "Годы выпуска фильмов"
 
 #: incode-movies.php:119
 msgctxt "taxonomy general name"
-msgid "Years of movie releases"
-msgstr "Годы выпуска фильмов"
+msgid "Year of movie release"
+msgstr "Год выпуска фильма"
 
 #: incode-movies.php:120
 msgctxt "taxonomy singular name"
@@ -352,7 +352,7 @@ msgstr "Загружен для фильма:"
 
 #: incode-movies.php:232
 msgid "Miniature of movie"
-msgstr "Миниатюра фильм"
+msgstr "Миниатюра фильма"
 
 #: incode-movies.php:233
 msgid "Set miniature of movie"
@@ -386,6 +386,26 @@ msgstr "Постраничная навигация"
 msgid "Filter"
 msgstr "Фильтр"
 
+#: incode-movies.php:293
+msgid "Additional information about the film"
+msgstr "Дополнительные сведения о фильме"
+
+#: incode-movies.php:304
+msgid "Cost of the movie show"
+msgstr "Стоимость сеанса"
+
+#: incode-movies.php:305
+msgid "Enter the cost"
+msgstr "Укажите стоимость сеанса."
+
+#: incode-movies.php:310
+msgid "Release date of the film"
+msgstr "Дата выхода в прокат"
+
+#: incode-movies.php:311
+msgid "Enter a date."
+msgstr "Укажите дату."
+
 #. Plugin Name of the plugin/theme
 msgid "InCode Movies"
 msgstr ""
@@ -401,3 +421,390 @@ msgstr "Вячеслав Макаров"
 #. Author URI of the plugin/theme
 msgid "http://bazilio.com/"
 msgstr "http://bazilio.com/"
+
+msgid "Australia"
+msgstr "Австралия"
+
+msgid "Austria"
+msgstr "Австрия"
+
+msgid "Azerbaijan"
+msgstr "Азербайджан"
+
+msgid "Albania"
+msgstr "Албания"
+
+msgid "Algeria"
+msgstr "Алжир"
+
+msgid "Argentina"
+msgstr "Аргентина"
+
+msgid "Armenia"
+msgstr "Армения"
+
+msgid "Afghanistan"
+msgstr "Афганистан"
+
+msgid "Belarus"
+msgstr "Белоруссия"
+
+msgid "Belgium"
+msgstr "Бельгия"
+
+msgid "Bulgaria"
+msgstr "Болгария"
+
+msgid "Bolivia"
+msgstr "Боливия"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Босния и Герцеговина"
+
+msgid "Brazil"
+msgstr "Бразилия"
+
+msgid "United Kingdom"
+msgstr "Великобритания"
+
+msgid "Hungary"
+msgstr "Венгрия"
+
+msgid "Venezuela"
+msgstr "Венесуэла"
+
+msgid "Viet Nam"
+msgstr "Вьетнам"
+
+msgid "Germany"
+msgstr "Германия"
+
+msgid "Hong Kong"
+msgstr "Гонконг"
+
+msgid "Greenland"
+msgstr "Гренландия"
+
+msgid "Greece"
+msgstr "Греция"
+
+msgid "Georgia"
+msgstr "Грузия"
+
+msgid "Denmark"
+msgstr "Дания"
+
+msgid "Egypt"
+msgstr "Египет"
+
+msgid "Israel"
+msgstr "Израиль"
+
+msgid "India"
+msgstr "Индия"
+
+msgid "Indonesia"
+msgstr "Индонезия"
+
+msgid "Jordan"
+msgstr "Иордания"
+
+msgid "Iraq"
+msgstr "Ирак"
+
+msgid "Iran"
+msgstr "Иран"
+
+msgid "Ireland"
+msgstr "Ирландия"
+
+msgid "Iceland"
+msgstr "Исландия"
+
+msgid "Spain"
+msgstr "Испания"
+
+msgid "Italy"
+msgstr "Италия"
+
+msgid "Kazakhstan"
+msgstr "Казахстан"
+
+msgid "Cambodia"
+msgstr "Камбоджа"
+
+msgid "Canada"
+msgstr "Канада"
+
+msgid "Qatar"
+msgstr "Катар"
+
+msgid "Cyprus"
+msgstr "Кипр"
+
+msgid "KDPR"
+msgstr "КНДР"
+
+msgid "China"
+msgstr "КНР"
+
+msgid "Colombia"
+msgstr "Колумбия"
+
+msgid "Korea"
+msgstr "Корея"
+
+msgid "Cuba"
+msgstr "Куба"
+
+msgid "Latvia"
+msgstr "Латвия"
+
+msgid "Lebanon"
+msgstr "Ливан"
+
+msgid "Libya"
+msgstr "Ливия"
+
+msgid "Lithuania"
+msgstr "Литва"
+
+msgid "Macedonia"
+msgstr "Македония"
+
+msgid "Morocco"
+msgstr "Марокко"
+
+msgid "Mexico"
+msgstr "Мексика"
+
+msgid "Moldova"
+msgstr "Молдавия"
+
+msgid "Monaco"
+msgstr "Монако"
+
+msgid "Mongolia"
+msgstr "Монголия"
+
+msgid "Nepal"
+msgstr "Непал"
+
+msgid "Nigeria"
+msgstr "Нигерия"
+
+msgid "Netherlands"
+msgstr "Нидерланды"
+
+msgid "Nicaragua"
+msgstr "Никарагуа"
+
+msgid "New Zealand"
+msgstr "Новая Зеландия"
+
+msgid "Norway"
+msgstr "Норвегия"
+
+msgid "United Arab Emirates"
+msgstr "ОАЭ"
+
+msgid "Pakistan"
+msgstr "Пакистан"
+
+msgid "Paraguay"
+msgstr "Парагвай"
+
+msgid "Peru"
+msgstr "Перу"
+
+msgid "Poland"
+msgstr "Польша"
+
+msgid "Portugal"
+msgstr "Португалия"
+
+msgid "Russian Federation"
+msgstr "Россия"
+
+msgid "Romania"
+msgstr "Румыния"
+
+msgid "El Salvador"
+msgstr "Сальвадор"
+
+msgid "Saudi Arabia"
+msgstr "Саудовская Аравия"
+
+msgid "Senegal"
+msgstr "Сенегал"
+
+msgid "Serbia"
+msgstr "Сербия"
+
+msgid "Singapore"
+msgstr "Сингапур"
+
+msgid "Syrian Arab Republic"
+msgstr "Сирия"
+
+msgid "Slovakia"
+msgstr "Словакия"
+
+msgid "Slovenia"
+msgstr "Словения"
+
+msgid "United States"
+msgstr "США"
+
+msgid "Tajikistan"
+msgstr "Таджикистан"
+
+msgid "Thailand"
+msgstr "Таиланд"
+
+msgid "Tuvalu"
+msgstr "Тувалу"
+
+msgid "Tunisia"
+msgstr "Тунис"
+
+msgid "Turkmenistan"
+msgstr "Туркмения"
+
+msgid "Turkey"
+msgstr "Турция"
+
+msgid "Uganda"
+msgstr "Уганда"
+
+msgid "Uzbekistan"
+msgstr "Узбекистан"
+
+msgid "Ukraine"
+msgstr "Украина"
+
+msgid "USA"
+msgstr "США"
+
+msgid "Philippines"
+msgstr "Филиппины"
+
+msgid "Finland"
+msgstr "Финляндия"
+
+msgid "France"
+msgstr "Франция"
+
+msgid "Croatia"
+msgstr "Хорватия"
+
+msgid "Montenegro"
+msgstr "Черногория"
+
+msgid "Czech Republic"
+msgstr "Чехия"
+
+msgid "Chile"
+msgstr "Чили"
+
+msgid "Switzerland"
+msgstr "Швейцария"
+
+msgid "Sweden"
+msgstr "Швеция"
+
+msgid "Ecuador"
+msgstr "Эквадор"
+
+msgid "Estonia"
+msgstr "Эстония"
+
+msgid "Japan"
+msgstr "Япония"
+
+msgid "action"
+msgstr "боевик"
+
+msgid "adventure"
+msgstr "приключения"
+
+msgid "anime"
+msgstr "аниме"
+
+msgid "biography"
+msgstr "биографический"
+
+msgid "cartoon"
+msgstr "мультфильм"
+
+msgid "children's"
+msgstr "детский"
+
+msgid "comedy"
+msgstr "комедия"
+
+msgid "crime"
+msgstr "криминал"
+
+msgid "detective"
+msgstr "детектив"
+
+msgid "documentary"
+msgstr "документальный"
+
+msgid "drama"
+msgstr "драма"
+
+msgid "eroticism"
+msgstr "эротика"
+
+msgid "family"
+msgstr "семейный"
+
+msgid "fantasy"
+msgstr "фэнтези"
+
+msgid "horror"
+msgstr "ужасы"
+
+msgid "melodrama"
+msgstr "мелодрама"
+
+msgid "music"
+msgstr "музыка"
+
+msgid "musical"
+msgstr "мюзикл"
+
+msgid "mystic"
+msgstr "мистика"
+
+msgid "post-apocalyptic"
+msgstr "постапокалипсис"
+
+msgid "reality show"
+msgstr "реалити-шоу"
+
+msgid "scientific"
+msgstr "научный"
+
+msgid "sci-fi"
+msgstr "фантастика"
+
+msgid "short film"
+msgstr "короткометражный"
+
+msgid "sport"
+msgstr "спорт"
+
+msgid "thriller"
+msgstr "триллер"
+
+msgid "war"
+msgstr "военный"
+
+msgid "western"
+msgstr "вестерн"
+
+msgid "historical"
+msgstr "исторический"

@@ -13,8 +13,8 @@ define('INCODE_MOVIES__PLUGIN_FILE', __FILE__);
 define('INCODE_MOVIES__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('INCODE_MOVIES__VERSION', '1.0.0');
 
-require_once(INCODE_MOVIES__PLUGIN_DIR . 'on_activate.php');
-require_once(INCODE_MOVIES__PLUGIN_DIR . 'on_deactivate.php');
+require_once(INCODE_MOVIES__PLUGIN_DIR . '/on_activate.php');
+require_once(INCODE_MOVIES__PLUGIN_DIR . '/on_deactivate.php');
 
 // Load css & js
 //function incode_movies_enqueue_js_css(){
@@ -33,7 +33,6 @@ load_plugin_textdomain('incode-movies', false, dirname(plugin_basename(__FILE__)
 add_action('init', 'create_taxGenres', 0);
 function create_taxGenres(){
 	$args = [
-		//TODO подключить i18n ко всем текстовым ресурсам
 		'label'                 => __('Movie genres', 'incode-movies'),
 		'labels'                => [
 			'name'                       => _x('Movie genres', 'taxonomy general name', 'incode-movies'),
@@ -243,7 +242,7 @@ function register_post_movies(){
 			'parent_item_colon'     => null,
 			'all_items'             => __('All movies', 'incode-movies'),
 			'archives'              => __('Archives of movies', 'incode-movies'),
-			'insert_into_item'      => __('INSERT INTO movie info', 'incode-movies'),
+			'insert_into_item'      => __('Insert in movie info', 'incode-movies'),
 			'uploaded_to_this_item' => _x('Uploaded to his movie:', 'incode-movies'),
 			'featured_image'        => __('Miniature of movie', 'incode-movies'),
 			'set_featured_image'    => __('Set miniature of movie', 'incode-movies'),
@@ -384,4 +383,17 @@ function include_template_function($template_path){
 		}
 	}
 	return $template_path;
+}
+
+add_action( 'loop_start', 'add_banner_before_movie_list' );
+function add_banner_before_movie_list($WPQuery){
+	if(get_post_type() == 'movies' && $WPQuery->query_vars['post_type'] == 'movies'){
+		echo '<div class="incode-movies-banner">Баннер ДО списка</div>';
+	}
+}
+add_action( 'loop_end', 'add_banner_after_movie_list' );
+function add_banner_after_movie_list($WPQuery){
+	if(get_post_type() == 'movies'){
+		echo '<div class="incode-movies-banner">Баннер ПОСЛЕ списка</div>';
+	}
 }

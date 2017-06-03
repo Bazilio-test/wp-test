@@ -25,3 +25,13 @@
     margin-right: 23px;
     margin-top: 7px;
 }
+.incode-movies-banner{
+    background-color: #e6e6e6;
+    border: 1px solid gray;
+    padding: 40px;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px !important;
+    margin-bottom: 20px;
+    display: block;
+}

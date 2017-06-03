@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: InCode Movies\n"
 "POT-Creation-Date: 2017-06-02 21:52+0300\n"
-"PO-Revision-Date: 2017-06-03 10:11+0300\n"
+"PO-Revision-Date: 2017-06-03 16:26+0300\n"
 "Last-Translator: Viacheslav Makarov <v.makarov@bazilio.ru>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -38,6 +38,9 @@ msgstr "Мovie genre"
 #: incode-movies.php:25
 msgid "Genres"
 msgstr "Genres"
+
+msgid "Genre"
+msgstr "Genre"
 
 #: incode-movies.php:26
 msgid "All movie genres"
@@ -389,6 +392,22 @@ msgstr "Filter"
 #: incode-movies.php:292
 msgid "Additional information about the film"
 msgstr "Additional information about the film"
+
+#: incode-movies.php:304
+msgid "Cost of the movie show"
+msgstr "Cost of the movie show"
+
+#: incode-movies.php:305
+msgid "Enter the cost"
+msgstr "Enter the cost"
+
+#: incode-movies.php:310
+msgid "Release date of the film"
+msgstr "Release date of the film"
+
+#: incode-movies.php:311
+msgid "Enter a date in format of dd.mm.yyy"
+msgstr "Enter a date in format of dd.mm.yyy"
 
 #. Plugin Name of the plugin/theme
 msgid "InCode Movies"

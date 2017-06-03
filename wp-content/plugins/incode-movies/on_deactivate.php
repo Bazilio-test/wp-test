@@ -21,4 +21,4 @@ function incode_movies_plugin_deactivate(){
 	}
 }
 
-register_deactivation_hook(INCODE_MOVIES__PLUGIN, 'incode_movies_plugin_deactivate');
+register_deactivation_hook(INCODE_MOVIES__PLUGIN_FILE, 'incode_movies_plugin_deactivate');

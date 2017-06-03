@@ -8,6 +8,13 @@ Author URI: http://bazilio.com/
 Text Domain: incode-movies
 */
 
+define('INCODE_MOVIES__PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('INCODE_MOVIES__PLUGIN', __FILE__);
+
+require_once(INCODE_MOVIES__PLUGIN_DIR . 'on_activate.php');
+require_once(INCODE_MOVIES__PLUGIN_DIR . 'on_deactivate.php');
+
+
 // load localization
 load_plugin_textdomain('incode-movies', false, dirname(plugin_basename(__FILE__)) . '/lang');
 
@@ -47,7 +54,7 @@ function create_taxGenres(){
 		'meta_box_cb'           => null,
 		'show_admin_column'     => false,
 		'description'           => '',
-		'hierarchical'          => true,
+		'hierarchical'          => false,
 		'update_count_callback' => '',
 		'query_var'             => true,
 		'rewrite'               => [
@@ -68,7 +75,7 @@ function create_taxCountries(){
 	$args = [
 		'label'                 => __('Сountries', 'incode-movies'),
 		'labels'                => [
-			'name'                       => _x('Сountries', 'taxonomy general name', 'incode-movies'),
+			'name'                       => _x('Country producers of the film', 'taxonomy general name', 'incode-movies'),
 			'singular_name'              => _x('Сountry', 'taxonomy singular name', 'incode-movies'),
 			'menu_name'                  => __('Countries', 'incode-movies'),
 			'all_items'                  => __('All countries', 'incode-movies'),
@@ -95,7 +102,7 @@ function create_taxCountries(){
 		'meta_box_cb'           => null,
 		'show_admin_column'     => false,
 		'description'           => '',
-		'hierarchical'          => true,
+		'hierarchical'          => false,
 		'update_count_callback' => '',
 		'query_var'             => true,
 		'rewrite'               => [
@@ -116,7 +123,7 @@ function create_taxYears(){
 	$args = [
 		'label'                 => __('Years of movie releases', 'incode-movies'),
 		'labels'                => [
-			'name'                       => _x('Years of movie releases', 'taxonomy general name', 'incode-movies'),
+			'name'                       => _x('Year of movie release', 'taxonomy general name', 'incode-movies'),
 			'singular_name'              => _x('Year of movie release', 'taxonomy singular name', 'incode-movies'),
 			'menu_name'                  => __('Years', 'incode-movies'),
 			'all_items'                  => __('All years of releases', 'incode-movies'),
@@ -143,7 +150,7 @@ function create_taxYears(){
 		'meta_box_cb'           => null,
 		'show_admin_column'     => false,
 		'description'           => '',
-		'hierarchical'          => true,
+		'hierarchical'          => false,
 		'update_count_callback' => '',
 		'query_var'             => true,
 		'rewrite'               => [
@@ -191,7 +198,7 @@ function create_taxActors(){
 		'meta_box_cb'           => null,
 		'show_admin_column'     => false,
 		'description'           => '',
-		'hierarchical'          => true,
+		'hierarchical'          => false,
 		'update_count_callback' => '',
 		'query_var'             => true,
 		'rewrite'               => [
@@ -239,49 +246,119 @@ function register_post_movies(){
 			'items_list_navigation' => __('Page navigation', 'incode-movies'),
 			'filter_items_list'     => __('Filter', 'incode-movies'),
 		],
-		'description'          => '', // Короткое описание записи/страницы. По умолчанию: ''.
-		'public'               => true, // Управление видимостью в админ-панели ('show_in_nav_menus', 'show_ui') и внешнем фронтэнде ('exclude_from_search', 'publicly_queryable'). По умолчанию: false.
-		'exclude_from_search'  => true, // Исключить ли записи из результатов поиска фронтэнда. По умолчанию: значение аргумента 'public'.
-		'publicly_queryable'   => true, // Доступность на внешнем сайте: могут ли запросы быть выполненными во фронтэнде как часть parse_request(). По умолчанию: значение аргумента 'public'.
-		'show_ui'              => true, // Возможность управления данным пользовательским типом записи в админ-панели. По умолчанию: значение аргумента 'public'.
-		'show_in_nav_menus'    => true, // Доступность данного пользовательского типа записи в навигационном меню сайта. По умолчанию: значение аргумента 'public'.
-		'show_in_menu'         => true, // Показывать ли тип записи в админ-меню. Значение аргумента 'show_ui' должно быть true. По умолчанию: значение аргумента 'show_ui'.
-		'show_in_admin_bar'    => true, // Показывать ли тип записи в админ-баре. По умолчанию: значение аргумента 'show_in_menu'.
+		'description'          => '',
+		'public'               => true,
+		'exclude_from_search'  => true,
+		'publicly_queryable'   => true,
+		'show_ui'              => true,
+		'show_in_nav_menus'    => true,
+		'show_in_menu'         => true,
+		'show_in_admin_bar'    => true,
 		'menu_position'        => 5,
 		//TODO сменить иконку
 		'menu_icon'            => 'dashicons-editor-textcolor',
-		'map_meta_cap'         => null, // Использовать ли внутренние значения по умолчанию для управления правами. По умолчанию: null.
-		'hierarchical'         => false, // Является ли тип записи иерархическим (т.е. страницей). Позволяет установливать родительскую страницу. По умолчанию: false.
+		'map_meta_cap'         => null,
+		'hierarchical'         => false,
 		'supports'             => [
-			'title', // Заголовок объекта типа записи.
-			'editor', // Редактор контента.
-			'author', // Автор.
-			'thumbnail', // Миниатюра.
+			'title',
+			'editor',
+			'author',
+			'thumbnail',
 			'excerpt', // Цитата, отрывок.
 			'trackbacks', // Отправить обратные ссылки.
 			'custom-fields', // Произвольные поля.
-			'comments', // Комментарии.
+			'comments',
 			'revisions', // Сохраняет версии.
 			'page-attributes', // Атрибуты.
 			'post-formats', // Формат записи.
 		],
 		'register_meta_box_cb' => null, // Обеспечивает обратный вызов функции, которая требуется при настройке метабоксов в разделе редактирования. По умолчанию: null.
-		'taxonomies'           => ['taxgenres', 'taxcountries', 'taxyears', 'taxactors'], // Массив связанных таксономий для данного типа записи. Пользовательскую таксономию необходимо зарегестрировать через функцию register_taxonomy(). По умолчанию: без таксономий.
+		'taxonomies'           => ['taxgenres', 'taxcountries', 'taxyears', 'taxactors'],
 		'has_archive'          => false, // Включает архивы данного типа записи. Будет использоваться значение $post_type как ярлык архива по умолчанию. По умолчанию: false
 		// Возможность перезаписи для данного типа записи. Чтобы предотвратить перезапись, используют значение false. По умолчанию: true и значение $post_type используется как ярлык.
 		'rewrite'              => [
-			'slug'       => $post_type, // Текст в ссылке. По умолчанию: значение $post_type.
-			'with_front' => false, // Должна ли структура ссылки быть с базовым URL. Пример: если структура ссылки /blog/, то ссылка при соответствующих параметрах 'with_front' выглядит так: false->/news/, true->/blog/news/). По умолчанию: true.
-			'feeds'      => false, // Должна ли структура постоянных ссылок быть встроена для этого типа записи. По умолчанию: значение 'has_archive'.
-			'pages'      => true, // Должна ли структура ссылок обеспечена быть постраничной навигацией. По умолчанию: true.
+			'slug'       => $post_type,
+			'with_front' => false,
+			'feeds'      => false,
+			'pages'      => true,
 		],
-		'permalink_epmask'     => EP_PERMALINK, // Перезаписывает конечное значение. По умолчанию: EP_PERMALINK.
-		'query_var'            => true, // Задается значение запроса для данного типа записи. По умолчанию: true - задается значение $post_type.
-		'can_export'           => true, // Возможность данного типа записи быть экспортированным. По умолчанию: true.
-		'delete_with_user'     => null, // Удалять ли записи данного типа при удалении их автора. По умолчанию: null.
-		'show_in_rest'         => false, // Представлять ли этот тип записи в REST API. По умолчанию: false.
+		'permalink_epmask'     => EP_PERMALINK,
+		'query_var'            => true,
+		'can_export'           => true,
+		'delete_with_user'     => null,
+		'show_in_rest'         => false,
 		'rest_base'            => $post_type, // Базовый ярлык данного типа записи когда доступно использование REST API. По умолчанию: значение $post_type.
-		'_builtin'             => false, // Является ли этот тип записи собственным или встроенным. Рекомендация: не использовать этот аргумент при регистрации собственного типа сообщения. По умолчанию: false.
+		'_builtin'             => false,
 	];
 	register_post_type($post_type, $args);
 }
+
+// Add a metabox for custom fields
+function movies_meta_box(){
+	add_meta_box(
+		'movies_meta_box', // Идентификатор(id)
+		__('Additional information about the film', 'incode-movies'), // Заголовок области с мета-полями(title)
+		'show_movies_metabox', // Вызов(callback)
+		'movies', // Тип поста, в котором будет отображаться метабокс
+		'normal',
+		'high');
+}
+
+add_action('add_meta_boxes', 'movies_meta_box');
+
+//Description of custom fields
+$movies_meta_fields = [
+	['id' => 'show_price', 'label' => __('Cost of the movie show', 'incode-movies')],
+	['id' => 'release_date', 'label' => __('Release date of the film', 'incode-movies')]
+];
+
+// Drow meta fields
+function show_movies_metabox(){
+	global $movies_meta_fields;  // Обозначим наш массив с полями глобальным
+	global $post;  // Глобальный $post для получения id создаваемого/редактируемого поста
+
+	// Выводим скрытый input, для верификации. Безопасность прежде всего!
+	echo '<input type="hidden" name="custom_meta_box_nonce" value="' . wp_create_nonce(basename(__FILE__)) . '" />';
+
+	$price = $movies_meta_fields[0];
+	$meta_price = get_post_meta($post->ID, $price['id'], true);
+	$release = $movies_meta_fields[1];
+	$meta_release = get_post_meta($post->ID, $release['id'], true);
+	echo '<table class="form-table"><tr>';
+	echo '<td><label style="font-weight: 700;" for="' . $price['id'] . '">' . $price['label'] . ':</label> <input type="text" name="' . $price['id'] . '" id="' . $price['label'] . '" value="' . $meta_price . '" size="10" /></td>';
+	echo '<td><label style="font-weight: 700;" for="' . $release['id'] . '">' . $release['label'] . ':</label> <input type="text" name="' . $release['id'] . '" id="' . $release['label'] . '" value="' . $meta_release . '" size="10" /></td>';
+	echo '</tr></table>';
+}
+
+/**
+ * Save data from custome meta fields
+ *
+ * @param $post_id
+ */
+function save_movies_meta_fields($post_id){
+	global $movies_meta_fields;
+
+	// проверяем наш проверочный код
+	if(!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__))) return;
+	// Проверяем авто-сохранение
+	if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+	// Проверяем права доступа
+	if('page' == $_POST['post_type']){
+		if(!current_user_can('edit_page', $post_id)) return;
+	}elseif(!current_user_can('edit_post', $post_id)) return;
+
+
+	// Если все отлично, прогоняем массив через foreach
+	foreach($movies_meta_fields as $field){
+		$old = get_post_meta($post_id, $field['id'], true); // Получаем старые данные (если они есть), для сверки
+		$new = $_POST[$field['id']];
+		if($new && $new != $old){  // Если данные новые
+			update_post_meta($post_id, $field['id'], $new); // Обновляем данные
+		}elseif('' == $new && $old){
+			delete_post_meta($post_id, $field['id'], $old); // Если данных нету, удаляем мету.
+		}
+	}
+	return;
+}
+
+add_action('save_post', 'save_movies_meta_fields');

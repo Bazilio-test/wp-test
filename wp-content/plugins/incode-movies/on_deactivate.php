@@ -17,7 +17,7 @@ function incode_movies_plugin_deactivate(){
 	$tts = $wpdb->get_results($SQL);
 
 	foreach($tts as $tt){
-		wp_delete_term( $tt->term_id, $tt->taxonomy );
+		wp_delete_term($tt->term_id, $tt->taxonomy);
 	}
 }
 

@@ -67,7 +67,7 @@ function populate_demo_data(){
 	foreach($films as $film){
 		$title = $film['name'];
 		if(empty ($title)) continue;
-		$args = [wp_unslash(sanitize_post_field('post_type', 'movies', 0, 'db')),wp_unslash(sanitize_post_field('post_title', $title, 0, 'db'))];
+		$args = [wp_unslash(sanitize_post_field('post_type', 'movies', 0, 'db')), wp_unslash(sanitize_post_field('post_title', $title, 0, 'db'))];
 		if((int)$wpdb->get_var($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE post_type = %s AND post_title = %s", $args))) continue;
 		$postarr = [
 			'post_type'      => 'movies',

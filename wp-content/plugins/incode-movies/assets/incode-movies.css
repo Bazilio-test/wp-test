@@ -43,13 +43,25 @@
     display: block;
 }
 
-div.incode-movies-l5 {font-size: 14px;margin-bottom: 20px;}
+div.incode-movies-l5 {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
 
-div.incode-movies-l5o {margin:  5px 0px 5px 0px;}
+div.incode-movies-l5o {
+    margin: 5px 0px 5px 0px;
+}
 
-span.incode-movies-l5d {line-height: 20px;width: 81px;margin-right: 20px;display: inline-block;}
+span.incode-movies-l5d {
+    line-height: 20px;
+    width: 81px;
+    margin-right: 20px;
+    display: inline-block;
+}
 
-span.incode-movies-l5t {line-height: 20px;}
+span.incode-movies-l5t {
+    line-height: 20px;
+}
 
 span.incode-movies-l5no {
 

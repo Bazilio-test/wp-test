@@ -1,9 +1,11 @@
 <?php
-
 /**
  * Populating with demo data
  * The function is executed upon activation
+ *
+ * Author: Viacheslav Makarov <v.makarov@bazilio.ru>
  */
+
 function populate_demo_data(){
 	global $movies_meta_fields;  // Обозначим наш массив с полями глобальным
 	global $wpdb;

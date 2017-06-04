@@ -1,4 +1,9 @@
 <?php
+/*
+ * Author: Viacheslav Makarov <v.makarov@bazilio.ru>
+ *
+ */
+
 // Exit if accessed directly.
 if(!defined('ABSPATH')){
 	exit;

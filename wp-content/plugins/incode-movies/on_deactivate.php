@@ -1,7 +1,13 @@
 <?php
+/**
+ * Remove plugin data on deactivate
+ *
+ *
+ *
+ * Author: Viacheslav Makarov <v.makarov@bazilio.ru>
+ *
+ */
 
-
-//Remove plugin data on deactivate
 function incode_movies_plugin_deactivate(){
 	global $wpdb;
 

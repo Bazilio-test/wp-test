@@ -3,7 +3,7 @@
 Plugin Name: InCode Movies
 Description: Test task from InCode: movie catalog plug-in.
 Version: 1.0.0
-Author: Viacheslav Makarov
+Author: Viacheslav Makarov <v.makarov@bazilio.ru>
 Author URI: http://bazilio.com/
 Text Domain: incode-movies
 */
@@ -14,7 +14,9 @@ define('INCODE_MOVIES__PLUGIN_URL', plugin_dir_url(__FILE__));
 define('INCODE_MOVIES__VERSION', '1.0.0');
 
 require_once(INCODE_MOVIES__PLUGIN_DIR . '/on_activate.php');
-require_once(INCODE_MOVIES__PLUGIN_DIR . '/on_deactivate.php');
+
+//Switch of removal of plugin data on deactivate for production
+//require_once(INCODE_MOVIES__PLUGIN_DIR . '/on_deactivate.php');
 
 // Load css & js
 //function incode_movies_enqueue_js_css(){

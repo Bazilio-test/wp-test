@@ -1,5 +1,9 @@
 <?php
-//Remove plugin data on uninstall
+/**
+ * Remove plugin data on uninstall
+ *
+ * Author: Viacheslav Makarov <v.makarov@bazilio.ru>
+ */
 function incode_movies_plugin_deactivate(){
 	global $wpdb;
 

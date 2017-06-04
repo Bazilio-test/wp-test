@@ -6,3 +6,78 @@
  Version:      1.0.0
  Text Domain:  unite-child
 */
+.navbar-nav > li > a {
+    color: #ccc !important;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    color: #ccc !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.unite-child-div1 {
+    text-transform: none;
+    padding: 0px 0px 4px 0px;
+    font-size: 12px;
+}
+
+.unite-child-div2 {
+    font-size: 12px;
+    text-transform: none;
+    padding-bottom: 11px;
+}
+
+span.unite-child-l {
+    display: inline;
+    line-height: 20px;
+    margin-right: 5px;
+}
+
+.unite-child-d {
+    color: #54397E;
+    line-height: 20px;
+    display: inline;
+    /* background-color: yellow; */
+    vertical-align: top;
+}
+
+.unite-child-thmb {
+    width: 56px;
+    height: 84px;
+}
+
+.unite-child-thmb-d {
+    float: left;
+    margin-right: 23px;
+    margin-top: 7px;
+}
+
+span.unite-child-l {
+    display: inline-block;
+}
+
+span.unite-child-l::before {
+    background: url('inc/index18.svg');
+    vertical-align: top;
+    padding-bottom: 1px;
+    content: '';
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+}
+
+span.unite-child-l-genre::before {
+    background-position: -36px 0px;
+}
+
+span.unite-child-l-countries::before {
+    background-position: 0px 0px;
+}
+
+span.unite-child-l-release::before {
+    background-position: -18px 0px;
+}
+
+span.unite-child-l-price::before {
+    background-position: 18px 0px;
+}

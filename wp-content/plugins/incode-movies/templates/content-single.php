@@ -38,21 +38,21 @@
 
 		$meta_price = '';
 		if($price = get_post_meta(get_the_ID(), 'show_price', true)){
-			$meta_price = '<span class="byline-ss incode-movies-l">' . __('Cost of the movie show', 'incode-movies') . ':</span>' .
-				'<span class="byline-ss incode-movies-d">' . esc_html($price) . ' &#8381;</span>';
+			$meta_price = '<span class="incode-movies-l">' . __('Cost of the movie show', 'incode-movies') . ':</span>' .
+				'<span class="incode-movies-d">' . esc_html($price) . ' &#8381;</span>';
 		}
 
 		$meta_release = '';
 		if($release = get_post_meta(get_the_ID(), 'release_date', true)){
-			$meta_release = '<span class="byline-ss incode-movies-l">' . __('Release date of the film', 'incode-movies') . ':</span>' .
-				'<span class="byline-ss incode-movies-d">' . esc_html($release) . '</span>';
+			$meta_release = '<span class="incode-movies-l">' . __('Release date of the film', 'incode-movies') . ':</span>' .
+				'<span class="incode-movies-d">' . esc_html($release) . '</span>';
 		}
 
 		$meta_countries = '';
 		if($terms = wp_get_post_terms(get_the_ID(), 'taxcountries', ["fields" => "all"])){
 			if(!is_wp_error($terms)){
-				$meta_countries = '<span class="byline-ss incode-movies-l">' . __(count($terms) == 1 ? 'Country' : 'Countries', 'incode-movies') 
-                    . ':</span><span class="byline-ss incode-movies-d">';
+				$meta_countries = '<span class="incode-movies-l">' . __(count($terms) == 1 ? 'Country' : 'Countries', 'incode-movies')
+					. ':</span><span class="incode-movies-d">';
 				foreach($terms as $term){
 					$meta_countries .= esc_html($term->name) . ', ';
 				}
@@ -63,8 +63,8 @@
 		$meta_genres = '';
 		if($terms = wp_get_post_terms(get_the_ID(), 'taxgenres', ["fields" => "all"])){
 			if(!is_wp_error($terms)){
-				$meta_genres = '<span class="byline-ss incode-movies-l">' . __(count($terms) == 1 ? 'Genre' : 'Genres', 'incode-movies') 
-                    . ':</span><span class="byline-ss incode-movies-d">';
+				$meta_genres = '<span class="incode-movies-l">' . __(count($terms) == 1 ? 'Genre' : 'Genres', 'incode-movies')
+					. ':</span><span class="incode-movies-d">';
 				foreach($terms as $term){
 					$meta_genres .= esc_html($term->name) . ', ';
 				}

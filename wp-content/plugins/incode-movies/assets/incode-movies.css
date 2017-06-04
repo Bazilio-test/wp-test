@@ -1,31 +1,38 @@
-.incode-movies-div1{
+.incode-movies-div1 {
     text-transform: none;
     padding: 0px 0px 4px 0px;
     font-size: 12px;
 }
 
-.incode-movies-div2{
+.incode-movies-div2 {
     font-size: 12px;
     text-transform: none;
     padding-bottom: 11px;
 }
 
-.incode-movies-l {display: inline;line-height: 20px;}
+.incode-movies-l {
+    display: inline;
+    line-height: 20px;
+}
+
 .incode-movies-d {
     color: #54397E;
     line-height: 20px;
     display: inline;
 }
-.incode-movies-thmb{
+
+.incode-movies-thmb {
     width: 56px;
     height: 84px;
 }
-.incode-movies-thmb-d{
+
+.incode-movies-thmb-d {
     float: left;
     margin-right: 23px;
     margin-top: 7px;
 }
-.incode-movies-banner{
+
+.incode-movies-banner {
     background-color: #e6e6e6;
     border: 1px solid gray;
     padding: 40px;
@@ -34,4 +41,16 @@
     margin-top: 20px !important;
     margin-bottom: 20px;
     display: block;
+}
+
+div.incode-movies-l5 {font-size: 14px;margin-bottom: 20px;}
+
+div.incode-movies-l5o {margin:  5px 0px 5px 0px;}
+
+span.incode-movies-l5d {line-height: 20px;width: 81px;margin-right: 20px;display: inline-block;}
+
+span.incode-movies-l5t {line-height: 20px;}
+
+span.incode-movies-l5no {
+
 }

@@ -329,12 +329,29 @@ function show_movies_metabox(){
 
 	$price = $movies_meta_fields[0];
 	$meta_price = get_post_meta($post->ID, $price['id'], true);
+
 	$release = $movies_meta_fields[1];
 	$meta_release = get_post_meta($post->ID, $release['id'], true);
+	$release_value = convert_date_YMD2DMY($meta_release);
+
 	echo '<table class="form-table"><tr>';
 	echo '<td><label style="font-weight: 700;" for="' . $price['id'] . '">' . $price['label'] . ':</label> <input type="text" name="' . $price['id'] . '" id="' . $price['label'] . '" value="' . $meta_price . '" size="10" /></td>';
-	echo '<td><label style="font-weight: 700;" for="' . $release['id'] . '">' . $release['label'] . ':</label> <input type="text" name="' . $release['id'] . '" id="' . $release['label'] . '" value="' . $meta_release . '" size="10" /> ' . $release['label'] . '</td>';
+	echo '<td><label style="font-weight: 700;" for="' . $release['id'] . '">' . $release['label'] . ':</label> <input type="text" name="' . $release['id'] . '" id="' . $release['label'] . '" value="' . $release_value . '" size="10" /> ' . $release['label'] . '</td>';
 	echo '</tr></table>';
+}
+
+/**
+ * Convert date string from YYYY-MM-DD to DD.MM.YYYY
+ *
+ * @param $dateYMD - date in format YYYY-MM-DD
+ *
+ * @return string
+ */
+function convert_date_YMD2DMY($dateYMD){
+	if(preg_match('/^([1-2]\d{3})\-((?:0[1-9])|(?:1[0-2]))\-((?:0[1-9])|(?:[1-2][0-9])|(?:3[0-1]))$/', $dateYMD, $matches)){
+		return $matches[3] . '.' . $matches[2] . '.' . $matches[1];
+	}
+	return '';
 }
 
 /**
@@ -354,17 +371,27 @@ function save_movies_meta_fields($post_id){
 		if(!current_user_can('edit_page', $post_id)) return;
 	}elseif(!current_user_can('edit_post', $post_id)) return;
 
-//TODO Дата выхода - не только год, но и дата RegExp \d\d\.\d\d\.\d\d\d\d
-	// Если все отлично, прогоняем массив через foreach
-	foreach($movies_meta_fields as $field){
-		$old = get_post_meta($post_id, $field['id'], true); // Получаем старые данные (если они есть), для сверки
-		$new = $_POST[$field['id']];
-		if($new && $new != $old){  // Если данные новые
-			update_post_meta($post_id, $field['id'], $new); // Обновляем данные
-		}elseif('' == $new && $old){
-			delete_post_meta($post_id, $field['id'], $old); // Если данных нету, удаляем мету.
-		}
+	$old = get_post_meta($post_id, 'show_price', true);
+	$new = $_POST['show_price'];
+	if($new && $new != $old){
+		update_post_meta($post_id, 'show_price', $new);
+	}elseif('' == $new && $old){
+		delete_post_meta($post_id, 'show_price', $old);
 	}
+
+	$old = get_post_meta($post_id, 'release_date', true);
+	$new = $_POST['release_date'];
+	if($new && preg_match('%^((?:[1-9])|(?:0[1-9])|(?:[1-2][0-9])|(?:3[0-1]))(?:[\.\-\/])((?:[1-9])|(?:0[1-9])|(?:1[0-2]))(?:[\.\-\/])([1-2]\d{3})$%i', $new, $matches)){
+		$new = $matches[3] . '-' . substr(('00' . $matches[2]), -2) . '-' . substr(('00' . $matches[1]), -2);
+	}else{
+		$new = '';
+	}
+	if($new && $new != $old){
+		update_post_meta($post_id, 'release_date', $new);
+	}elseif('' == $new && $old){
+		delete_post_meta($post_id, 'release_date', $old);
+	}
+
 	return;
 }
 
@@ -385,15 +412,16 @@ function include_template_function($template_path){
 	return $template_path;
 }
 
-add_action( 'loop_start', 'add_banner_before_movie_list' );
+add_action('loop_start', 'add_banner_before_movie_list');
 function add_banner_before_movie_list($WPQuery){
-	if(get_post_type() == 'movies' && $WPQuery->query_vars['post_type'] == 'movies'){
+	if(get_post_type() == 'movies' && get_option('iconv_movies_archive_loop') == 'now'){
 		echo '<div class="incode-movies-banner">Баннер ДО списка</div>';
 	}
 }
-add_action( 'loop_end', 'add_banner_after_movie_list' );
+
+add_action('loop_end', 'add_banner_after_movie_list');
 function add_banner_after_movie_list($WPQuery){
-	if(get_post_type() == 'movies'){
+	if(get_post_type() == 'movies' && get_option('iconv_movies_archive_loop') == 'now'){
 		echo '<div class="incode-movies-banner">Баннер ПОСЛЕ списка</div>';
 	}
 }

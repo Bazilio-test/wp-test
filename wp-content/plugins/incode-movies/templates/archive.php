@@ -18,14 +18,19 @@ get_header(); ?>
 				?>
             </header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
+			<?php /* Start the Loop. Set flag for hooks which draw banners */
+			add_option('iconv_movies_archive_loop', 'now');
+			?>
 			<?php while(have_posts()) : the_post(); ?>
 
 				<?php
 				load_template(INCODE_MOVIES__PLUGIN_DIR . '/templates/content.php', false);
 				?>
 
-			<?php endwhile; ?>
+			<?php endwhile;
+			/* End Loop and remove flag */
+			delete_option('iconv_movies_archive_loop');
+			?>
 
 			<?php unite_paging_nav(); ?>
 
